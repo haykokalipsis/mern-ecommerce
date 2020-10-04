@@ -1,0 +1,30 @@
+{
+  "name": "mern-ecommerce",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "node api/server.js",
+    "server": "nodemon api/server.js",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/haykokalipsis/mern-ecommerce.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/haykokalipsis/mern-ecommerce/issues"
+  },
+  "homepage": "https://github.com/haykokalipsis/mern-ecommerce#readme",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "concurrently": "^4.*.*",
+    "nodemon": "^2.0.4"
+  }
+}
