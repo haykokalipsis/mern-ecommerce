@@ -3,11 +3,14 @@
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
+  "type": "module",
   "scripts": {
     "start": "node api/server.js",
     "server": "nodemon api/server.js",
     "client": "npm start --prefix client",
-    "dev": "concurrently \"npm run server\""
+    "dev": "concurrently -c 'green,blue' \"npm run server\" \"npm run client\"",
+    "data:import": "node api/seeder",
+    "data:destroy": "node api/seeder -d"
   },
   "repository": {
     "type": "git",
@@ -20,8 +23,12 @@
   },
   "homepage": "https://github.com/haykokalipsis/mern-ecommerce#readme",
   "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "colors": "^1.4.0",
     "dotenv": "^8.2.0",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "express-async-handler": "^1.1.4",
+    "mongoose": "^5.10.7"
   },
   "devDependencies": {
     "concurrently": "^4.*.*",
